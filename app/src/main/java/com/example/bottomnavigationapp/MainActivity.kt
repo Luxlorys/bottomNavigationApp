@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav.setOnItemReselectedListener {
 
+            // using item's ids change fragments
             when (it.itemId) {
                 R.id.home -> { selectedFragment = HomeFragment() }
                 R.id.createPost -> { selectedFragment = NewPostFragment() }
