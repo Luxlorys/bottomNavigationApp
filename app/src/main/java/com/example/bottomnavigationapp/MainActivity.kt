@@ -15,8 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        bottomNav.setOnItemReselectedListener {
-
+        bottomNav.setOnItemSelectedListener {
             // using item's ids change fragments
             when (it.itemId) {
                 R.id.home -> { selectedFragment = HomeFragment() }
@@ -25,10 +24,10 @@ class MainActivity : AppCompatActivity() {
             }
             // replace one fragment to another
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container, selectedFragment).commit()
+            true
         }
 
-        // set the default fragment to show
+// set the default fragment to show
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFragment()).commit()
     }
-
 }
