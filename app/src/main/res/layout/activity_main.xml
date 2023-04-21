@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -17,9 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="#153395"
-        app:itemIconTint="@android:color/holo_blue_bright"
-        app:itemTextColor="@android:color/white"
+        android:background="@drawable/background_nav_curved"
+        android:layout_margin="15dp"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
         app:menu="@menu/bottom_menu" />
-
 </RelativeLayout>
